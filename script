@@ -1,4 +1,4 @@
-print("updated version")
+print("v2")
 
 local HttpService = game:GetService("HttpService")
 local XH = Instance.new("ScreenGui")
@@ -577,7 +577,7 @@ end
 
 KConfirm.MouseButton1Click:Connect(function()
 	print("button clicked")
-local KeyInput = TextBox.Text
+local KeyInput = KeyInputBox.Text
 
 if KeyInput == Key then
 	if writefile then
