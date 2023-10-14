@@ -1,4 +1,4 @@
-print("v2")
+print("v1")
 
 local HttpService = game:GetService("HttpService")
 local XH = Instance.new("ScreenGui")
@@ -582,9 +582,10 @@ if readfile and writefile then
 	end
 end
 
-local InputKey = KeyInputBox.Text
+local InputKey
 
 KConfirm.MouseButton1Click:Connect(function()
+	InputKey = KeyInputBox.Text
 	print("button clicked")
 
 	print("input:", InputKey)
