@@ -1,3 +1,5 @@
+print("updated version")
+
 local HttpService = game:GetService("HttpService")
 local XH = Instance.new("ScreenGui")
 XH.Name = "XH"
@@ -483,8 +485,8 @@ local KSFrame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local TextButton = Instance.new("TextButton")
 local TextLabel_2 = Instance.new("TextLabel")
-local TextBox = Instance.new("TextBox")
-local TextButton_2 = Instance.new("TextButton")
+local KeyInputBox = Instance.new("TextBox")
+local KConfirm = Instance.new("TextButton")
 local TextButton_3 = Instance.new("TextButton")
 
 KSFrame.Parent = XH
@@ -528,27 +530,27 @@ TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextScaled = true
 TextLabel_2.TextSize = 14
 
-TextBox.Parent = KSFrame
-TextBox.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-TextBox.BorderSizePixel = 0
-TextBox.Position = UDim2.new(0.037, 0, 0.473, 0)
-TextBox.Size = UDim2.new(0, 224, 0, 22)
-TextBox.Font = Enum.Font.SourceSans
-TextBox.PlaceholderText = "Input Your Key"
-TextBox.Text = ""
-TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextBox.TextSize = 14
+KeyInputBox.Parent = KSFrame
+KeyInputBox.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+KeyInputBox.BorderSizePixel = 0
+KeyInputBox.Position = UDim2.new(0.037, 0, 0.473, 0)
+KeyInputBox.Size = UDim2.new(0, 224, 0, 22)
+KeyInputBox.Font = Enum.Font.SourceSans
+KeyInputBox.PlaceholderText = "Input Your Key"
+KeyInputBox.Text = ""
+KeyInputBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyInputBox.TextSize = 14
 
-TextButton_2.Parent = KSFrame
-TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.BorderSizePixel = 0
-TextButton_2.Position = UDim2.new(0.037, 0, 0.656, 0)
-TextButton_2.Size = UDim2.new(0, 224, 0, 22)
-TextButton_2.Font = Enum.Font.SourceSans
-TextButton_2.Text = "Confirm Key"
-TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_2.TextSize = 14
+KConfirm.Parent = KSFrame
+KConfirm.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KConfirm.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KConfirm.BorderSizePixel = 0
+KConfirm.Position = UDim2.new(0.037, 0, 0.656, 0)
+KConfirm.Size = UDim2.new(0, 224, 0, 22)
+KConfirm.Font = Enum.Font.SourceSans
+KConfirm.Text = "Confirm Key"
+KConfirm.TextColor3 = Color3.fromRGB(0, 0, 0)
+KConfirm.TextSize = 14
 
 TextButton_3.Parent = KSFrame
 TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -568,10 +570,13 @@ if readfile and writefile then
 	if readfile(FileName) == Key then
 		KSFrame:Destroy()
 		LoadXtremeHub()
+	else
+		print("file did not match key")
 	end
 end
 
-TextButton_2.MouseButton1Click:Connect(function()
+KConfirm.MouseButton1Click:Connect(function()
+	print("button clicked")
 local KeyInput = TextBox.Text
 
 if KeyInput == Key then
