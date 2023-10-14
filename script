@@ -1,4 +1,4 @@
-print("v1")
+print("executed")
 
 local HttpService = game:GetService("HttpService")
 local XH = Instance.new("ScreenGui")
@@ -584,21 +584,21 @@ end
 
 local InputKey
 
+local InputKey
+
 KConfirm.MouseButton1Click:Connect(function()
 	InputKey = KeyInputBox.Text
-	print("button clicked")
-
-	print("input:", InputKey)
+	print("Button clicked")
+	print("Input key:", InputKey) -- Print the input key
 
 	if InputKey == Key then
 		if writefile then
 			writefile(FileName, Key)
 		end
 		KSFrame:Destroy()
-		print("loading hub")
+		print("Loading hub")
 		LoadXtremeHub()
 	else
-		print(InputKey)
-		print("invalid key! expected", Key, "got:", InputKey)
+		print("Invalid key! Expected:", Key, "Got:", InputKey) -- Print the invalid key message
 	end
 end)
