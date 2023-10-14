@@ -582,17 +582,23 @@ end
 
 KConfirm.MouseButton1Click:Connect(function()
 	local InputKey = KeyInputBox.Text
-	print("Button clicked")
-	print("Input key:", InputKey) -- Print the input key
-
 	if InputKey == Key then
 		if writefile then
 			writefile(FileName, Key)
 		end
 		KSFrame:Destroy()
-		print("Loading hub")
 		LoadXtremeHub()
 	else
-		print("Got:", InputKey) -- Print the invalid key message
+		local origPlaceholderText = KeyInputBox.PlaceholderText
+		local origPlaceholderColor = KeyInputBox.PlaceholderColor3
+		
+		KeyInputBox.PlaceholderColor3 = Color3.fromRGB(206, 0, 0)
+		KeyInputBox.PlaceholderText = "Invalid Key!"
+		KeyInputBox.Text = ""
+		wait(2)
+		KeyInputBox.PlaceholderColor3 = origPlaceholderColor
+		KeyInputBox.PlaceholderText = origPlaceholderText
 	end
 end)
+
+print("Successfully loaded Xtreme Hub!")
