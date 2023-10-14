@@ -582,10 +582,11 @@ if readfile and writefile then
 	end
 end
 
+local InputKey = KeyInputBox.Text
+
 KConfirm.MouseButton1Click:Connect(function()
 	print("button clicked")
-	
-	local InputKey = KeyInputBox.Text
+
 	print("input:", InputKey)
 
 	if InputKey == Key then
@@ -596,6 +597,7 @@ KConfirm.MouseButton1Click:Connect(function()
 		print("loading hub")
 		LoadXtremeHub()
 	else
+		print(InputKey)
 		print("invalid key! expected", Key, "got:", InputKey)
 	end
 end)
