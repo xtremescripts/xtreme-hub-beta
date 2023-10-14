@@ -297,7 +297,7 @@ local function NewScriptButton(PlaceId, Script, Title)
 	end)
 end
 
-for Data in pairs(Scripts) do
+for _, Data in pairs(Scripts) do
 	NewScriptButton(Data.PlaceId, Data.Script, Data.Title)
 end
 
