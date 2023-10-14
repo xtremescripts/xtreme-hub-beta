@@ -1,11 +1,10 @@
-print("updated")
-
 local HttpService = game:GetService("HttpService")
 local XH = Instance.new("ScreenGui")
 XH.Name = "XH"
 XH.Parent = game.CoreGui or game.Players.LocalPlayer.PlayerGui
 
 local function LoadXtremeHub()
+	print("loading xtreme hub")
 	local Frame = Instance.new("Frame")
 	local Frame_2 = Instance.new("Frame")
 	local TextButton_2 = Instance.new("TextButton")
@@ -577,6 +576,8 @@ end
 
 KConfirm.MouseButton1Click:Connect(function()
 	print("button clicked")
+	
+	print(KeyInputBox.Text)
 
 	if KeyInputBox.Text == Key then
 		if writefile then
