@@ -1,5 +1,3 @@
-print("v2")
-
 local HttpService = game:GetService("HttpService")
 local XH = Instance.new("ScreenGui")
 XH.Name = "XH"
@@ -571,7 +569,7 @@ TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_3.TextSize = 14
 
 local FileName = "xtremehub.key"
-local Key = game:HttpGet("https://raw.githubusercontent.com/xtremescripts/key-system/main/main")
+local Key = game:HttpGet("https://raw.githubusercontent.com/xtremescripts/key-system/main/main"):gsub("%s+", "")
 
 if readfile and writefile then
 	if readfile(FileName) == Key then
@@ -582,12 +580,8 @@ if readfile and writefile then
 	end
 end
 
-local InputKey
-
-local InputKey
-
 KConfirm.MouseButton1Click:Connect(function()
-	InputKey = KeyInputBox.Text
+	local InputKey = KeyInputBox.Text
 	print("Button clicked")
 	print("Input key:", InputKey) -- Print the input key
 
