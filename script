@@ -1,4 +1,4 @@
-print("executed")
+print("v2")
 
 local HttpService = game:GetService("HttpService")
 local XH = Instance.new("ScreenGui")
@@ -599,6 +599,6 @@ KConfirm.MouseButton1Click:Connect(function()
 		print("Loading hub")
 		LoadXtremeHub()
 	else
-		print("Invalid key! Expected:", Key, "Got:", InputKey) -- Print the invalid key message
+		print("Got:", InputKey) -- Print the invalid key message
 	end
 end)
