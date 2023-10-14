@@ -505,7 +505,7 @@ TextLabel.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
 TextLabel.BorderColor3 = Color3.fromRGB(162, 162, 162)
 TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0, 0, 0, 0)
-TextLabel.Size = UDim2.new(0, 241, 0, 30)
+TextLabel.Size = UDim2.new(1, 0, 0, 30)
 TextLabel.Font = Enum.Font.SourceSansSemibold
 TextLabel.Text = "Key System"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -544,7 +544,7 @@ KeyInputBox.Position = UDim2.new(0.037, 0, 0.473, 0)
 KeyInputBox.Size = UDim2.new(0, 224, 0, 22)
 KeyInputBox.Font = Enum.Font.SourceSans
 KeyInputBox.PlaceholderText = "Input Your Key"
-KeyInputBox.Text = ""
+KeyInputBox.Text = "test"
 KeyInputBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 KeyInputBox.TextSize = 14
 
