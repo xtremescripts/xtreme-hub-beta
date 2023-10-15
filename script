@@ -2,7 +2,7 @@ local HttpService = game:GetService("HttpService")
 local XH = Instance.new("ScreenGui")
 XH.Name = "XH"
 XH.Parent = game.CoreGui or game.Players.LocalPlayer.PlayerGui
-
+print("updated")
 local function LoadXtremeHub()
 	print("loading xtreme hub")
 	local Frame = Instance.new("Frame")
