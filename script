@@ -128,8 +128,10 @@ local function LoadXtremeHub()
 	UIGridLayout.CellSize = UDim2.new(0, 120, 0, 150)
 
 	TextLabel_2.Parent = Frame
+	TextButton_2.AnchorPoint = Vector2.new(1, 0)
 	TextLabel_2.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
 	TextLabel_2.BorderSizePixel = 0
+	TextButton_2.Position = UDim2.new(1, 0, 0, 0)
 	TextLabel_2.Size = UDim2.new(0, 556, 0, 30)
 	TextLabel_2.Font = Enum.Font.SourceSansSemibold
 	TextLabel_2.Text = "Xtreme Hub"
