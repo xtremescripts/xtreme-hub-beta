@@ -636,4 +636,12 @@ KConfirm.MouseButton1Click:Connect(function()
 	end
 end)
 
+TextButton_3.MouseButton1Click:Connect(function()
+	local origText = TextButton_3.Text
+	setclipboard("https://discord.com/invite/BDtNaPvhnC")
+	TextButton_3.Text = "Copied!"
+	wait(1)
+	TextButton_3.Text = origText
+end)
+
 print("Successfully loaded Xtreme Hub!")
