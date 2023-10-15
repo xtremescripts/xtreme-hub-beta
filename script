@@ -1,3 +1,5 @@
+print("new version")
+
 local HttpService = game:GetService("HttpService")
 local XH = Instance.new("ScreenGui")
 XH.Name = "XH"
@@ -22,7 +24,7 @@ local function LoadXtremeHub()
 	local TextButton_7 = Instance.new("TextButton")
 	local UIPadding_2 = Instance.new("UIPadding")
 	local Frame_4 = Instance.new("Frame")
-	local TextLabel_3 = Instance.new("TextLabel")
+	local TextLabel_4 = Instance.new("TextLabel")
 
 	Frame.Parent = XH
 	Frame.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
@@ -39,14 +41,14 @@ local function LoadXtremeHub()
 	Frame_4.Position = UDim2.new(1, -44, 0, 0)
 	Frame_4.Size = UDim2.new(0, 50, 0, 50)
 	
-	TextLabel_3.Parent = Frame_4
-	TextLabel_3.BackgroundTransparency = 1
-	TextLabel_3.Text = "XH"
-	TextLabel_3.Font = Enum.Font.SourceSansSemibold
-	TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-	TextLabel_3.TextSize = 26
-	TextLabel_3.Position = UDim2.new(0.2, -60, 0, 0)
-	TextLabel_3.Size = UDim2.new(1, 0, 1, 0)
+	TextLabel_4.Parent = Frame_4
+	TextLabel_4.BackgroundTransparency = 1
+	TextLabel_4.Text = "XH"
+	TextLabel_4.Font = Enum.Font.SourceSansSemibold
+	TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel_4.TextSize = 26
+	TextLabel_4.Position = UDim2.new(0.2, -60, 0, 0)
+	TextLabel_4.Size = UDim2.new(1, 0, 1, 0)
 	
 	Frame_2.Parent = Frame
 	Frame_2.BackgroundTransparency = 1
@@ -411,7 +413,7 @@ local function LoadXtremeHub()
 		minimised = not minimised
 		
 		game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.4, Enum.EasingStyle.Quad), {Size = minimised and UDim2.new(0, 100, 0, 32) or UDim2.new(0, 556, 0, 348)}):Play()
-		game:GetService("TweenService"):Create(TextLabel_3, TweenInfo.new(0.4, Enum.EasingStyle.Quad), {Position = minimised and UDim2.new(0, 0, 0, 0) or UDim2.new(0.2, -60, 0, 0)}):Play()
+		game:GetService("TweenService"):Create(TextLabel_4, TweenInfo.new(0.4, Enum.EasingStyle.Quad), {Position = minimised and UDim2.new(0, 0, 0, 0) or UDim2.new(0.2, -60, 0, 0)}):Play()
 	end)
 
 	TextButton_6.MouseButton1Click:Connect(function()
