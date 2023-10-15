@@ -34,7 +34,7 @@ local function LoadXtremeHub()
 	
 	Frame_4.Parent = Frame
 	Frame_4.BackgroundTransparency = 1
-	Frame_4.ClipsDescendants = true
+	Frame_4.ClipsDescendants = false
 	Frame_4.AnchorPoint = Vector2.new(1, 0)
 	Frame_4.Position = UDim2.new(1, -44, 0, 0)
 	Frame_4.Size = UDim2.new(0, 50, 0, 50)
