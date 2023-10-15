@@ -577,7 +577,7 @@ KeyInputBox.Position = UDim2.new(0.037, 0, 0.473, 0)
 KeyInputBox.Size = UDim2.new(0, 224, 0, 22)
 KeyInputBox.Font = Enum.Font.SourceSans
 KeyInputBox.PlaceholderText = "Input Your Key"
-KeyInputBox.Text = "test"
+KeyInputBox.Text = ""
 KeyInputBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 KeyInputBox.TextSize = 14
 
@@ -640,7 +640,7 @@ TextButton_3.MouseButton1Click:Connect(function()
 	local origText = TextButton_3.Text
 	setclipboard("https://discord.com/invite/BDtNaPvhnC")
 	TextButton_3.Text = "Copied!"
-	wait(1)
+	wait(0.3)
 	TextButton_3.Text = origText
 end)
 
